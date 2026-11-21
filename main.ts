@@ -23,6 +23,7 @@ if (ENV_URL === '') {
   process.stderr.write('[entry] MAKEFUN_ENV_URL is not set: there is no env to register with\n');
   process.exit(1);
 }
+process.stderr.write('[entry] lifecycle starting\n');
 
 /** How long one register or done request may take before it is abandoned and retried. */
 const REQUEST_TIMEOUT_MS = 30_000;
